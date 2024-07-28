@@ -1,6 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+export interface CompilerSliceStateType {
+  html: string;
+  css: string;
+  javascript: string;
+  currentLanguage: "html" | "css" | "javascript";
+}
+
+const initialState: CompilerSliceStateType = {
   html: "",
   css: "",
   javascript: "",
@@ -11,7 +18,10 @@ const compilerSlice = createSlice({
   name: "compilerSlice",
   initialState,
   reducers: {
-    updateCurrentLanguage: (state, action: PayloadAction<string>) => {
+    updateCurrentLanguage: (
+      state,
+      action: PayloadAction<CompilerSliceStateType["currentLanguage"]>
+    ) => {
       state.currentLanguage = action.payload;
     },
   },
