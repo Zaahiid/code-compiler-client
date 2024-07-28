@@ -1,5 +1,12 @@
 import { Save, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const HelperHeader = () => {
   return (
@@ -19,6 +26,19 @@ const HelperHeader = () => {
           <Share2 size={16} />
           Share
         </Button>
+      </div>
+      <div className="__tab_switcher flex justify-center items-center gap-1">
+        <small>Language:</small>
+        <Select defaultValue="html">
+          <SelectTrigger className="w-[120px] bg-gray-800 focus:ring-0">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="html">HTML</SelectItem>
+            <SelectItem value="css">CSS</SelectItem>
+            <SelectItem value="javascript">JavaScript</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
     </div>
   );
