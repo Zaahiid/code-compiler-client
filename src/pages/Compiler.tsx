@@ -13,8 +13,8 @@ const Compiler = () => {
         className="h-[calc(100dvh-60px)] min-w-[350px]"
         defaultSize={50}
       >
-        <HelperHeader/>
-        <CodeEditor/>
+        <HelperHeader />
+        <CodeEditor />
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel
