@@ -24,7 +24,7 @@ const CodeEditor = () => {
   return (
     <CodeMirror
       value={value}
-      height="100vh"
+      height="calc(100vh - 60px - 50px)"
       extensions={[loadLanguage(currentLanguage)!]}
       onChange={onChange}
       theme={draculaInit({
